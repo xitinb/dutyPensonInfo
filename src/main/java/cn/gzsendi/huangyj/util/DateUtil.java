@@ -19,11 +19,10 @@ public class DateUtil {
     public static final DateTimeFormatter SHORT_DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHH");
 
 
-
     /**
      * 解析字符串日期为Date
      *
-     * @param dateStr 日期字符串
+     * @param dateStr           日期字符串
      * @param dateTimeFormatter 格式
      * @return Date
      */
