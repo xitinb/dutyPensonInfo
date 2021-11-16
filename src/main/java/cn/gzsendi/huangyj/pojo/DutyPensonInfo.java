@@ -2,8 +2,6 @@ package cn.gzsendi.huangyj.pojo;
 
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
 public class DutyPensonInfo {
 

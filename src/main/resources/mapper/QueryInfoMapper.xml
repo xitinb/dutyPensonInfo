@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.huangyj.mapper.QueryInfoMapper">
+
+    <select id="hasPenson" resultType="map">
+        SELECT t1.name,
+               t1.province,
+               t1.mobile,
+               t2.mobile mobile2,
+               t2.name   name2
+        FROM zygx_duty t1
+                 LEFT JOIN zygx_person t2
+                           ON t1.name = t2.name AND t1.mobile = t2.mobile AND t1.province = t2.province
+        WHERE t1.date &gt;= #{beginTime}
+          AND t1.date &lt; #{endTime}
+          AND t1.province = #{province}
+        GROUP BY t1.name, t1.mobile
+    </select>
+
+    <select resultType="map" id="HasMajorOrTechnologyTag">
+        SELECT t3.`use_name` name, t3.preferred_mobile mobile
+        FROM sync_user t3
+        WHERE t3.s_province = '00'
+          AND t3.hr_user_code IN
+              (
+                  SELECT DISTINCT PERSON_CODE
+                  FROM talents_person_label t2
+                  WHERE t2.LABEL_CODE IN
+                        (
+                            SELECT DISTINCT LABEL_CODE
+                            FROM talents_label t1
+                            WHERE t1.FULL_TXT LIKE '技术类%' OR t1.FULL_TXT LIKE '专业类%'
+                        )
+              )
+    </select>
+
+</mapper>

@@ -13,6 +13,7 @@ import java.util.Map;
 public class ZygxQuotaConstant {
 
     private static final Map<String, Object> QUOTAS = new HashMap<>();
+
     public static Map<String, Object> getQuotas(String key) {
         return MapUtil.get(QUOTAS, key, Map.class);
     }
