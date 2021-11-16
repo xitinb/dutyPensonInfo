@@ -1,0 +1,22 @@
+server:
+    port: 10100
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.60.12:3306/data_collection?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&useAffectedRows=true
+    username: root
+    password: GZ_SenDi3306##)^
+#    url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&allowMultiQueries=true
+#    username: root
+#    password: mm991003
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  # 扫描映射的文件
+  mapper-locations: classpath*:/mapper/*.xml
+  # 配置别名扫描的包
+  type-aliases-package: cn.gzsendi.huangyj.pojo
+  configuration:
+    # 开启驼峰映射
+    map-underscore-to-camel-case: true
