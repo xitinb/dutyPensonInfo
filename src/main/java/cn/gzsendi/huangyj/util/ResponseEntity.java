@@ -23,6 +23,26 @@ public class ResponseEntity<T> {
         this.message = responseCode.message();
     }
 
+    public static <T> ResponseEntity<T> SUCCESS() {
+        return new ResponseEntity<T>(ResponseCode.SUCCESS);
+    }
+
+    public static <T> ResponseEntity<T> SUCCESS(T data) {
+        return new ResponseEntity<T>(ResponseCode.SUCCESS).data(data);
+    }
+
+    public static <T> ResponseEntity<T> ERROR(T data) {
+        return new ResponseEntity<T>(ResponseCode.ERROR).data(data);
+    }
+
+    public static <T> ResponseEntity<T> ERROR() {
+        return new ResponseEntity<T>(ResponseCode.ERROR);
+    }
+
+    public static <T> ResponseEntity<T> ERROR(String message) {
+        return new ResponseEntity<T>(ResponseCode.ERROR).message(message);
+    }
+
     public T getData() {
         return this.data;
     }
@@ -48,25 +68,6 @@ public class ResponseEntity<T> {
     public ResponseEntity<T> message(String message) {
         this.message = message;
         return this;
-    }
-
-    public static <T> ResponseEntity<T> SUCCESS() {
-        return new ResponseEntity<T>(ResponseCode.SUCCESS);
-    }
-
-    public static <T> ResponseEntity<T> SUCCESS(T data) {
-        return new ResponseEntity<T>(ResponseCode.SUCCESS).data(data);
-    }
-    public static <T> ResponseEntity<T> ERROR(T data) {
-        return new ResponseEntity<T>(ResponseCode.ERROR).data(data);
-    }
-
-    public static <T> ResponseEntity<T> ERROR() {
-        return new ResponseEntity<T>(ResponseCode.ERROR);
-    }
-
-    public static <T> ResponseEntity<T> ERROR(String message) {
-        return new ResponseEntity<T>(ResponseCode.ERROR).message(message);
     }
 
 }
