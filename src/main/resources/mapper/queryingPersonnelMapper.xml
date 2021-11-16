@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gzsendi.huangyj.mapper.QueryingPersonnelMapper">
+
+    <select id="isNotNull1"  resultType="map">
+        SELECT  t1.name,
+        t1.province,
+        t1.mobile,
+        t2.mobile mobile2,
+        t2.name name2
+        FROM zygx_duty t1 LEFT JOIN zygx_person t2
+        ON t1.name = t2.name AND t1.mobile =t2.mobile AND t1.province = t2.province
+        WHERE t1.date &gt;= #{beginTime} AND t1.date &lt; #{endTime}
+        AND t1.province= #{province}
+        GROUP BY t1.name,t1.mobile
+    </select>
+
+    <select id="isNotNull2"  resultType="map">
+SELECT tab2.use_name,tab2.preferred_mobile,tab2.PERSON_CODE,tab2.LABEL_CODE,t3.`FULL_TXT`
+FROM
+(SELECT tab1.use_name,tab1.preferred_mobile,tab1.hr_user_code,t2.PERSON_CODE,t2.LABEL_CODE
+FROM
+(SELECT t1.use_name,t1.preferred_mobile,t1.hr_user_code
+FROM sync_user t1
+WHERE t1.`use_name` = #{name} AND t1.preferred_mobile = #{mobile} AND t1.s_province='00') tab1
+LEFT JOIN talents_person_label t2
+ON tab1.hr_user_code = t2.person_code
+GROUP BY t2.`LABEL_CODE`) tab2 LEFT JOIN talents_label t3
+ON tab2.LABEL_CODE = t3.LABEL_CODE
+    </select>
+
+</mapper>

@@ -1,0 +1,77 @@
+{
+  "值班表": {
+    "date": "值班日期",
+    "name": "姓名",
+    "mobile": "电话",
+    "major": "专业",
+    "type": "白班/夜班",
+    "role": "值班角色"
+  },
+  "宽带业务": {
+    "broadband_OnlineUsers": "宽带在线用户数（人）"
+  },
+  "省内政企客户申告类": {
+    "gov_OnwayNums": "在途工单总数（个）",
+    "gov_AddNums": "新增工单数（个）",
+    "gov_ReceiveTimelinessRate": "接单及时率(0.00%)",
+    "gov_FirsttroublesTimelinessRate": "首次故障定位及时率(0.00%)",
+    "gov_TroublesTimelinessRate": "故障处理及时率(0.00%)",
+    "gov_AvghandleTime": "平均处理时长（小时）",
+    "gov_TimeoutNums": "超时工单数（个）",
+    "gov_LongTimeoutNums": "超长时工单数（个）",
+    "gov_TimeouThandlePerc": "超时工单数占比(0.00%)",
+    "gov_HangupPerc": "挂起工单数占比(0.00%)"
+  },
+  "省内公众客户申告类": {
+    "public_ReceiveTimelinessRate": "接单及时率(0.00%)",
+    "public_TroublesTimelinessRate": "故障处理及时率(0.00%)",
+    "public_AvgHandleTime": "平均处理时长（小时）",
+    "public_AddNums": "新增工单数（个）",
+    "public_OnwayNums": "在途工单总数（个）",
+    "public_TimeoutNums": "超时工单数（个）",
+    "public_LongTimeoutNums": "超长时工单数（个）",
+    "public_TimeoutHandlePerc": "超时工单数占比(0.00%)",
+    "public_HangupPerc": "挂起工单数占比(0.00%)"
+  },
+  "省内云网类故障": {
+    "cn_Avghandletime": "平均处理时长（小时）",
+    "cn_HangupPerc": "挂起工单数占比(0.00%)",
+    "cn_LongTimeoutNums": "超长时工单数（个）",
+    "cn_OnwayNums": "在途工单总数（个）",
+    "cn_ReceiveTimelinessRate": "接单及时率(0.00%)",
+    "cn_SddNums": "新增工单数（个）",
+    "cn_TimeouThandlePerc": "超时工单数占比(0.00%)",
+    "cn_TimeoutNums": "超时工单数（个）",
+    "cn_TroublesTimelinessRate": "故障处理及时率(0.00%)"
+  },
+  "cycle": {
+    "cn_Avghandletime": "1440",
+    "cn_HangupPerc": "20",
+    "cn_LongTimeoutNums": "20",
+    "cn_ReceiveTimelinessRate": "1440",
+    "cn_SddNums": "20",
+    "cn_TimeouThandlePerc": "20",
+    "cn_TimeoutNums": "20",
+    "cn_TroublesTimelinessRate": "1440",
+    "public_ReceiveTimelinessRate": "1440",
+    "public_TroublesTimelinessRate": "1440",
+    "public_AvgHandleTime": "1440",
+    "public_AddNums": "20",
+    "public_OnwayNums": "20",
+    "public_TimeoutNums": "20",
+    "public_LongTimeoutNums": "20",
+    "public_TimeoutHandlePerc": "20",
+    "public_HangupPerc": "20",
+    "gov_OnwayNums": "20",
+    "gov_AddNums": "20",
+    "gov_ReceiveTimelinessRate": "1440",
+    "gov_FirsttroublesTimelinessRate": "20",
+    "gov_TroublesTimelinessRate": "1440",
+    "gov_AvghandleTime": "1440",
+    "gov_TimeoutNums": "20",
+    "gov_LongTimeoutNums": "20",
+    "gov_TimeouThandlePerc": "20",
+    "gov_HangupPerc": "20",
+    "broadband_OnlineUsers": "1440"
+  }
+}
