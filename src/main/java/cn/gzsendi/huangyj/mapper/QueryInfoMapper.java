@@ -12,4 +12,6 @@ public interface QueryInfoMapper {
 
     List<Map> HasMajorOrTechnologyTag();
 
+
+    这里来个东西吧。
 }
