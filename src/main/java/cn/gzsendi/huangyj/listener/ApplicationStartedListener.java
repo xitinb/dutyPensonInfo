@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.ClassUtils;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -40,5 +41,7 @@ public class ApplicationStartedListener implements ApplicationListener<ContextRe
         jsonStream = ClassUtils.getDefaultClassLoader().getResourceAsStream("json/cloudVideoApiKeys.json");
         read = IoUtil.read(jsonStream);
         VideoApiKey.putApiKeys(JSONUtil.toBean(read.toString("utf-8"), Map.class));
+        HashMap<String,String> stringHashMap = new HashMap<String,String>();
+wo shiyegekjshfsanfSAfsafsafsassf
     }
 }

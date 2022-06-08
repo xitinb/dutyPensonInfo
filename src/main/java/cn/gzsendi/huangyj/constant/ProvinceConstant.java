@@ -37,5 +37,7 @@ public class ProvinceConstant {
     public static void addCh2LongCode(Map<String, String> codeMap) {
         Assert.notEmpty(codeMap, "code can not be empty");
         CH_TO_LONG_CODE_MAP.putAll(codeMap);
+
+        我在这里
     }
 }
