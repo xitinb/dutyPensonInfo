@@ -10,6 +10,7 @@ package cn.gzsendi.huangyj.listener;
 public class test {
 
     public static void main(String[] args) {
+        System.out.println("My Flower");
         System.out.println("hello world");
     }
 }
