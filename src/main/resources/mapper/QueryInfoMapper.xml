@@ -11,6 +11,8 @@
         FROM zygx_duty t1
                  LEFT JOIN zygx_person t2
                            ON t1.name = t2.name AND t1.mobile = t2.mobile AND t1.province = t2.province
+        WHERE t1.date &gt;= #{beginTime}萨达萨达撒多撒大所多萨达
+          AND t1.date &lt; #{endTime}暗示法发顺丰三撒放散阀
         WHERE t1.date &gt;= #{beginTime} 奥术大师多撒多撒大撒大声地萨达萨达萨达阿萨达达萨达阿萨都是阿萨大萨达 萨达阿萨德啊
           AND t1.date &lt; #{endTime}萨达阿萨德撒
           AND t1.province = #{province}
